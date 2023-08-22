@@ -8,23 +8,32 @@
         <script src="./index.js"></script>
     </head>
     <body>
+        <div class="header">
         <h1>ROCK PAPER SCISSOR</h1>
+        </div>
         <div class="battleground">
-            <p id="result">You dare to challenge me human? Well show me what you got!</p>
-            <div>
-                <h3>human score</h3>
-                <p id="human-score">0</p>
+            <h2 id="result">You dare to challenge me human? Well show me what you got!</h2>
+
+            <div class="scoreboard">
+                <div class="score">
+                    <h3>You</h3>
+                    <p id="human-score" class="score-number">0</p>
+                </div>
+                <div class="score">
+                    <h3>Me</h3>
+                    <p id="computer-score" class="score-number">0</p>
+                </div>
             </div>
 
-            <span>
-                <h3>computer score</h3>
-                <p id="computer-score">0</p>
-            </span>
-            <div class="button-section">
-            <button onclick="rps('rock')">Rock</button>
-            <button onclick="rps('paper')">Paper</button>
-            <button onclick="rps('scissor')">Scissor</button>
             </div>
+
+            <div class="button-section">
+            <button onclick="rps('rock')" id="rock">Rock</button>
+            <button onclick="rps('paper')" id="paper">Paper</button>
+            <button onclick="rps('scissor')" id="scissor">Scissor</button>
+            </div>
+
+            <button id="replay" onclick="replay()">Replay</button>
         </div>
     </body>
 </html>

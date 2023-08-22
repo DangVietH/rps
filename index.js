@@ -27,12 +27,12 @@ function processResults(human_item, computer_item) {
     // scissor vs paper
     
     else if (human_item === "scissor" && computer_item === "paper") {
-        result = "You won. Your scissor cut my paper!"
+        result = "Good Job! Your scissor cut my paper!"
         human_score++
         document.getElementById("human-score").innerHTML = human_score
     } 
     else if (human_item === "paper" && computer_item === "scissor") {
-        result = "You Loose. My Scissor cut your Paper!"
+        result = "Ha! My Scissor cut your Paper!"
         computer_score++
         document.getElementById("computer-score").innerHTML = computer_score
     } 
@@ -40,11 +40,11 @@ function processResults(human_item, computer_item) {
     // rock vs paper
 
     else if (human_item === "paper" && computer_item === "rock") {
-        result = "You won. Paper eats the rock!"
+        result = "Good Job! Your paper ate my rock!"
         human_score++
         document.getElementById("human-score").innerHTML = human_score
     } else if (human_item === "rock" && computer_item === "paper") {
-        result = "You Loose. Paper eats the rock!"
+        result = "Ha! My paper ate your rock!"
         computer_score++
         document.getElementById("computer-score").innerHTML = computer_score
     }
@@ -52,11 +52,11 @@ function processResults(human_item, computer_item) {
     // rock vs scissor
 
     else if (human_item === "rock" && computer_item === "scissor") {
-        result = "You Won. Rock block scissor!"
+        result = "Good Job! Your rock block my scissor!"
         human_score++
         document.getElementById("human-score").innerHTML = human_score
     } else if (human_item === "scissor" && computer_item === "rock") {
-        result = "You Loose. Rock block scissor!"
+        result = "Ha! My rock block your scissor!"
         computer_score++
         document.getElementById("computer-score").innerHTML = computer_score
     } 
@@ -66,11 +66,19 @@ function processResults(human_item, computer_item) {
 
 function gameOver() {
     if (human_score === 5) {
-        document.getElementById("result").innerHTML = "Alright, you win!"
+        document.getElementById("result").innerHTML = "I surrender. You human win!"
     } else {
-        document.getElementById("result").innerHTML = "Hah you filth, I WINNNNN!"
+        document.getElementById("result").innerHTML = "Hah you human, I WINNNNN!"
     }
-
     human_score = 0
     computer_score = 0
+
+    document.getElementById("replay").style.visibility = "visible";
+    document.getElementById('rock').disabled = true;
+    document.getElementById('paper').disabled = true;
+    document.getElementById('scissor').disabled = true;
+}
+
+function replay() {
+    window.location.reload();
 }

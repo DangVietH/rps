@@ -2,6 +2,49 @@ body {
     text-align: center;
     background-color: rgb(50, 50, 50);
     color: white;
+    margin: 0%;
+}
+
+body, button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.header {
+    background-color: black;
+    padding: 1%;
+}
+
+.scoreboard {
+    width: 500px;
+    height: 200px;
+    border: 2px solid white;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+}
+
+.score {
+    flex: 1;
+    border: 1px solid white;
+}
+
+.score-number {
+    font-size: 50px;
+}
+
+
+button {
+    width: 100px;
+    height: 80px;
+    background-color: wheat;
+    border-radius: 12px;
+    border-color: rgb(50, 50, 50);;
+}
+
+#replay {
+    margin: 2%;
+    width: 300px;
+    height: 80px;
+    visibility: hidden;
+}
