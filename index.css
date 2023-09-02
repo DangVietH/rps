@@ -9,9 +9,13 @@ body, button {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header {
+.header, .footer {
     background-color: black;
     padding: 1%;
+}
+
+footer {
+    margin-top: 6%;
 }
 
 .scoreboard {
