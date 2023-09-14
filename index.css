@@ -46,6 +46,14 @@ button {
     border-color: rgb(50, 50, 50);;
 }
 
+button:hover {
+    background-color: rgba(245, 222, 179, 0.90);
+}
+
+button:active {
+    background-color: rgba(245, 222, 179, 0.650);
+}
+
 #replay {
     margin: 2%;
     width: 300px;
